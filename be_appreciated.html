@@ -16,8 +16,39 @@
 </head>
 <body>
 	<div class='align-center'>
-		<input type="hidden">
-		<audio id="myAudio" src="https://wechattest.bbgolden.com/upload/222.mp3" preload="auto" autoplay="false"></audio>
+		<button onclick="playPause()">播放/暂停</button> 
+		<div style="display:none">
+			<video id="video1"  autoplay="false" name="media">
+				<source src="https://wechattest.bbgolden.com/upload/222.mp3" type="audio/mp4">
+			</video>
+		</div>
 	</div>
+	
+	<script> 
+		var myVideo=document.getElementById("video1"); 
+
+		function playPause()
+		{ 
+			if (myVideo.paused) 
+			  myVideo.play(); 
+			else 
+			  myVideo.pause(); 
+		} 
+
+			function makeBig()
+		{ 
+			myVideo.width=560; 
+		} 
+
+			function makeSmall()
+		{ 
+			myVideo.width=320; 
+		} 
+
+			function makeNormal()
+		{ 
+			myVideo.width=420; 
+		} 
+	</script> 
 </body>
 </html>
